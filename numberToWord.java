@@ -20,12 +20,12 @@ class Word
 		{
 			text =words[num%10];
 			num=num/10;
-			text = tensword[num%10]+text;
+			text = tensword[num%10]+" "+text;
 			num=num/10;
 		}
 		if(num!=0)
 		{
-			text = words[num%10]+"hundred"+text;
+			text = words[num%10]+" hundred "+text;
 		}
 		
 		return text;
