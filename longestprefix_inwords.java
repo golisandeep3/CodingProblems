@@ -1,3 +1,7 @@
+/*
+Find the longest sequence of prefix shared by all the words in a string. 
+"abcdef abcdxxx abcdabcdef abcyy" => "abc"
+*/
 public void lprefix(String words[])
 	{
 		char test[]=words[0].toCharArray();
