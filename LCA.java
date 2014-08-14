@@ -2,6 +2,8 @@
 There is a binary tree. We are given 3 nodes a, b and c. 
 We need to find a node in the tree such that we remove all edge from that node we get a, b and c in three different trees
 */
+/* package whatever; // don't place package name! */
+
 import java.util.*;
 import java.lang.*;
 import java.io.*;
@@ -59,9 +61,54 @@ class BinaryTree
 	
 	public void lca3(int a, int b,int c)
 	{
-		Node temp = lca(root,a,b);
-		temp = lca(root,temp.data,c);
-		System.out.println("LCA: "+ temp.data);
+		Node temp1 = lca(root,a,b);
+		Node temp2 = lca(root,b,c);
+		Node temp3 = lca(root,a,c);
+		System.out.println("temp1:"+temp1.data);
+				System.out.println("temp2:"+temp2.data);
+		System.out.println("temp3:"+temp3.data);
+
+		if(temp1.data==temp2.data && temp1.data==temp3.data)
+		System.out.println("LCA: "+ temp1.data);
+		else
+		{
+			if(temp1.data==temp2.data)
+			{
+				System.out.println("LCA:"+height(temp1.data,temp3.data));
+			}
+			else if(temp1.data==temp3.data)
+			{
+				System.out.println("LCA:"+height(temp2.data,temp3.data));
+			}
+			else
+			{
+				System.out.println("LCA:"+height(temp1.data,temp2.data));
+			}
+		}
+	}
+	public int height(int a,int b)
+	{
+		System.out.println("height a:"+h(root,a,1));
+		System.out.println("height b:"+h(root,b,1));
+		//return 0;
+		return h(root,a,1)>h(root,b,1)?a:b;
+	}
+	private int h(Node temp,int a,int count)
+	{
+		if(temp==null)
+		return 0;
+		if(temp.data==a)
+		return count;
+		int left = h(temp.left,a,count+1);
+		
+		if(left!=0)
+		return left;
+		int right = h(temp.right,a,count+1);
+		return right;
+
+		
+		//return 0;
+		
 	}
 	private Node lca(Node temp,int a,int b)
 	{
@@ -82,6 +129,7 @@ class BinaryTree
 	}
 }
 
+/* Name of the class has to be "Main" only if the class is public. */
 public class Main
 {
 	public static void main (String[] args) throws java.lang.Exception
@@ -94,9 +142,10 @@ public class Main
 		bt.insert(5);
 		bt.insert(11);
 		bt.insert(20);
-		
+		bt.insert(25);
 		bt.inorder();
-		bt.lca3(11,20,15);
+		bt.lca3(11,20,9);
+		//bt.height(11,25);
 		
 	}
 }
