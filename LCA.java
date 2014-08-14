@@ -2,7 +2,7 @@
 There is a binary tree. We are given 3 nodes a, b and c. 
 We need to find a node in the tree such that we remove all edge from that node we get a, b and c in three different trees
 */
-/* package whatever; // don't place package name! */
+
 
 import java.util.*;
 import java.lang.*;
@@ -129,8 +129,7 @@ class BinaryTree
 	}
 }
 
-/* Name of the class has to be "Main" only if the class is public. */
-public class Main
+public class LCA
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
