@@ -1,3 +1,3 @@
 CodingProblems
 ==============
-Practic coding problems
+Practice coding problems
