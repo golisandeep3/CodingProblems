@@ -1,2 +1,4 @@
 1.The area of a cyclic quadrilateral is the maximum possible for any quadrilateral with the given side lengths.
 Area = sqrt[(s-a)(s-b)(s-c)(s-d)]
+2. Eulers Totient function phi(n) = n *(1-1/p1) *(1-1/p2) .......
+where p1 and p2 are prime factors of n
