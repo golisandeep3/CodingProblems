@@ -1,3 +1,8 @@
+/*
+http://www.spoj.com/problems/ANARC05H/
+
+For every position calculate number of possibilites for different sums
+*/
 import java.util.*;
 import java.lang.*;
 import java.io.*;
