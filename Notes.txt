@@ -4,3 +4,6 @@ Area = sqrt[(s-a)(s-b)(s-c)(s-d)]
 where p1 and p2 are prime factors of n
 3. A number can be represented as sum of two perfect squares if in the prime factorization,the primes of the form(4k+3) should occur even number of times. 
 https://www.math.hmc.edu/funfacts/ffiles/20008.5.shtml  
+
+4. square and cubic root  
+https://www.quora.com/How-can-you-write-C-functions-to-find-square-and-cube-roots-of-a-number-without-using-the-sqrt-and-pow-functions
